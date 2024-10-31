@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script>
+
+        $(document).ready(function() {
+
+            //back to top button 
+            $(window).scroll(function() {
+            if ($(this).scrollTop() > 700) {
+                $('#BTT').fadeIn();
+            } else {
+                $('#BTT').fadeOut();
+            }
+        });
+
+            $("#BTT").click(function () {
+            
+            // thanks Week 6 Lecture 
+            $("html, body").animate({scrollTop: 0}, 1000);
+            });
+        });
+
+        
+        $(document).scroll(function() {
+            // Aside function when scrolling
+            if( $(this).scrollTop() > 300 && $(this).scrollTop() < 950 ) {
+                $('aside.left').removeClass('leftOff');
+            } else {
+                $('aside.left').addClass('leftOff');
+            } 
+            if( $(this).scrollTop() > 3000 && $(this).scrollTop() < 3600 ) {
+                $('aside.right').removeClass('rightOff');
+            } else {
+                $('aside.right').addClass('rightOff');
+            }
+        });
+
+        $(document).ready(function() {
+            //scrolling function
+            function scrollToSection(event) {
+                event.preventDefault();
+                var $section = $($(this).attr('href'));
+
+                //animating the scrolling
+                $('html, body').animate({
+                    scrollTop: $section.offset().top
+                }, 500);
+            }
+            $('[data-scroll]').on('click', scrollToSection);
+        });
+        </script>
+
+</head>
+
+
+<body>
+
+
+    <nav>
+        <menu id="navmenu">
+            <li><a data-scroll href="#one">Duterte & PAGCOR</a></li>
+            <li><a data-scroll href="#two">Mayor? Spy? Filipino?</a></li>
+            <li><a data-scroll href="#three">Alice on the Guo</a></li>
+            <li><a data-scroll href="#four">What now?</a></li>
+            <li><a data-scroll href="#five">My Thoughts</a></li>
+        </menu>
+    </nav>
+    
+    <header>
+        <hgroup>
+            <h1>The Curious Case of Alice Guo and the <em>POGOs</em></h1>
+            <h2>How a Chinese Spy Became a Filipino Mayor Under a Hidden Crime Syndicate</h2>
+            <h2>by: Basty Gomez</h2>
+        </hgroup>
+        <figure>
+            <img class="headerimage"src="Images/Alice Guo Mugshot.jpeg" alt="A mug shot of Alice Guo, also known as Guo Hua Ping">
+            <figcaption>A mug shot of Alice Guo, also known as Guo Hua Ping, released on, September 6, 2024 | Facebook page of Benhur Abalos</figcaption>
+        </figure>
+    </header>
+    
+
+    <main>
+        <article>
+
+            <section id="one">
+                <h1>Duterte Administration and PAGCOR</h1>
+                <p class="firstp">February 2nd 2017, Executive Order 13 or <strong><strong><strong>EO 13</strong></strong></strong> was signed by former president Rodrigo Duterte which was said to <q>strengthen the fight against gambling and clarify jurisdiction.</q> This has been cited by Katrina Enrile, CEO of the Cagayan Economic Zone Authority as a mistake and a layered design to proliferate the problem that are Philippine Offshore Gaming Operations <em>(POGOs)</em>. Concerned advocates even lodged petitions as far back as 2017 to clarify the EO13 only to be junked by the Supreme Court in March 2023 due to a technicality of not following the court’s hierarchy. </p>
+                
+                <p>Dictator Ferdinand Marcos legalized gambling and created the Philippine Amusement and Gaming Corporation (Pagcor) in 1977 which sought to at least regulate the widespread gambling problem. However, Former President Duterte upon the signing of <strong><strong><strong><strong>EO 13</strong></strong></strong></strong> let rampant <em>POGOs</em>, which were not at all mentioned in the order, creating a gray area which allowed these other countries, specifically China, to use the Philippines as another breeding ground for their illegal activities.</p>
+                <p><em>POGOs</em> operate via the internet and the cloud, being able to take bets even from mainland China where gambling is illegal due to the fact the game takes place somewhere else. Local Filipinos are then employed for running the livestreams; customer service, strategic support, IT support, gaming software platform provider, and live studio streaming entities all off which required different licenses by CEZA but upon <strong><strong><strong>EO 13</strong></strong></strong> was centralized by PAGCOR and allowed <em>POGOs</em> to acquire one license to fully operate in Filipino territory.</p>
+            </section>
+            
+            <section id="two">
+                <h1>Mayor ?, Spy ?, <s>Filipino ?</s></h1>
+                <p>Alice Guo was elected Mayor in the rural province of Bamban, Tarlac 2 hours north of Manila. She rose to power out of nowhere and so did the seven hectare property owned by Baofu Land Development INC. wherein Ms Guo has affiliations with as well as 12 other companies wherein she is a major shareholder of. Her rise to power was spearheaded by the local political dynasties in power, Jose Antonio Feliciano who thrusted her into this position. With this power in mind she was able to secure necessary permits and forge documents that led <em>POGOs</em> to run the inhumane compound.
+                <p>A look inside the Compound shows that there were various entertainment centers, torture chambers, sex trafficking dens and much more immoral and illegal events happening, all of which are happening on Philippine soil because foreign organized crime were able to utilize the incompetency of the Philippine government.</p>
+                <figure class="ytvid">
+                    <iframe src="https://www.youtube.com/embed/lEvmW84jJ4Q?autoplay=0"></iframe>
+                    <figcaption>Manila Bulletin's inside look at the Bamban Compound</figcaption>
+                </figure>
+                <p>In the midst of darkness Senator Risa Hontiveros was able to bring to light the inconsistencies of these happenings as the chairwoman of the Senate Committee on Women, Children, Family Relations and Gender Equality. Through extensive senate hearings it was revealed she was not actually Alice Leal y Guo but actually Guo Hua Ping a Chinese national who through a myriad of lies and deception as well as repeatedly stating <q>hindi ko po maalala, your honor</q> (i cannot remember your honor) to simple personal questions such as education, parentage, and formative experiences in the Philippines.</p>
+            </section>
+            
+            <section id="three">
+                <h1>Alice On the Guo</h1>
+                <p>Having been caught in her lies and trickery she allegedly fled on July 18, 2024 to Malaysia then Singapore on July 21. How was this possible in the middle of her trafficking complaint when she has already been seen on national TV and is in the process of having her personal identification canceled. She was then found traveling by ferry to Indonesia on August 18 where she was then arrested in Tangerang City in Jakarta around 1:30AM on September 4. Even though there is no court-issued arrest warrant she is still guilty of fleeing through illegal means because the Bureau of Immigration has no trace of her fleeing the country. Luckily for the Philippines, Indonesian police were able to capture Alice Guo and deport her back to the Philippines, which the Philippines was unable to do in 2 years. </p>
+                <blockquote>“Hindi makakaalis si Alice Guo kung walang tumulong sa kanya na mga opisyales ng pamahalaan, parang nagpasampal tayo sa dayuhang ito na paulit ulit na sinasaula ang ating mga batas, patakaran at proseso."</blockquote>
+                <br>
+                <blockquote class="trans">(She could not have left if government officials did not help her…It’s like we allowed ourselves to be slapped by this foreigner who repeatedly made a mockery of our laws, rules, and processes.)</blockquote>
+            </section>
+            
+            <section id="four">
+                <h1>What now?</h1>
+                <p>As of October 2024, Guo is being detained at the Pasig City female dormitory and the senate is still pressuring her to rat out her superiors. This cleverly made scheme where  a real estate company rents out its compound to PAGCOR licensees and clouding its tracks by subverting Philippine bureaucracies through bribery and connections to continue their illegal proceedings is a clear embarrassment for the Filipinos. Current investigations lead Hongjiang Yang to share a joint account with the very POGO inside the Baofu compound which Alice Guo incorporated. It is important to note that Hongjiang Yang is brother to Michael Yang, Duterte’s economic advisor during his term— coming full circle.</p>
+                <p>Another tidbit about this all is that the entire crackdown started because President Ferdinand Marcos Jr. and Vice President Sara Duterte combined forces in the 2022 presidential elections and are now in a heated political dynasty war which split the government between sides of the same sinking boat. As of the October 29 Former President Duterte is also having his own senate hearing on his extrajudicial killings not even tackling his ties to allow all of this to happen in the first place.</p>
+            </section>
+            
+            <section id="five">
+                <h1>My Thoughts</h1>
+                <p>In my personal opinion, this entire ordeal speaks volumes about what the Philippines has come to. We are a nation that has survived three colonizations by the Spanish, Japanese, and American, but we are now facing the threat of another one by our once closest friend in the pre-colonial period. How do we allow this to happen? Through human greed, corrupt officials are nothing new in Southeast Asia, but as corrupt governments go, the Philippines has an entire lineage that traces back to its colonial roots. Manuel L. Quezon once said <q>I would rather have a government run like hell by Filipinos than a government run like heaven by Americans.</q> that is not to say we should have another colonial power take our reins, we have seen that during Martial Law but what I interpret from that is President Quezon is asking for Filipinos to take control of our lives, for the sake of our fellow Filipnos. We must stand united in fighting for independence however messy it may be. But these people in power only care about themselves. I believe that there are still sparks of hope, and it is our duty to fan these flames for those who are too sick and hungry to. For a brighter future and for a brighter Philippines.</p>
+            </section>
+            <img src="">
+            
+            <aside class="left leftOff">
+                <figure>
+                    <img src="/Images/Duterte.webp" alt="President Rodrigo Duterte">
+                    <figcaption>Pres. Duterte | TED ALJIBE/AFP/Getty Images</figcaption>
+                </figure>
+            </aside>
+            <aside class="right rightOff">
+                <figure>
+                    <img src="/Images/marcos v duterte.avif" alt="President Rodrigo Duterte">
+                    <figcaption>Uniteam tarpaulin | Pichayada Promchertchoo/CNA</figcaption>
+                </figure>
+            </aside>
+            
+        </article>
+        </main>
+            <button id="BTT">Back to Top</button>
+
+    </body>
+    
+    </html>
